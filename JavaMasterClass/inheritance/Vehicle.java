@@ -17,31 +17,14 @@ public class Vehicle {
         this.currentVelocity=0;
     }
 
-    public void drive (int km, boolean isGearTurnOn) {
-        if((km>0) && isGearTurnOn)
-            System.out.println("Vehicle is moving");
+    public void stop () {
+        this.currentVelocity=0;
     }
 
     public void move (int velocity, int direction) {
         currentDirection = direction;
         currentVelocity = velocity;
         System.out.println("Vehicle.move(): Move at " + currentVelocity + " in direction " + currentDirection);
-    }
-
-    public int getKm() {
-        return km;
-    }
-
-    public void setKm(int km) {
-        this.km = km;
-    }
-
-    public boolean isGearTurnOn() {
-        return isGearTurnOn;
-    }
-
-    public void setGearTurnOn(boolean gearTurnOn) {
-        isGearTurnOn = gearTurnOn;
     }
 
     public String getName() {
